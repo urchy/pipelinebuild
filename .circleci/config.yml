@@ -11,4 +11,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo "Word"
-      
+workflows:
+  version: 2
+  Hello_World: # this is the name of our workflow
+    jobs: # and here we list the jobs we are going to run.
+      - print_hello
+      - print_world
