@@ -5,7 +5,9 @@ jobs:
     docker:
       - image: cimg/node:14.10.1 
     steps:
-      - run: echo "Hello"
+      - run: echo "Hello" $myname 
+    environment:            
+      - myname: "Andre"
   print_world:
     docker:
       - image: circleci/node:13.8.0
