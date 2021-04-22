@@ -4,10 +4,10 @@ jobs:
   print_hello:
     docker:
       - image: cimg/node:14.10.1 
+        environment:            
+          - myname: "Andre"
     steps:
-      - run: echo "Hello" $myname 
-    environment:            
-      - myname: "Andre"
+      - run: echo "Hello" myname 
   print_world:
     docker:
       - image: circleci/node:13.8.0
