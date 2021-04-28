@@ -18,6 +18,11 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+      - run: return 1
+      - run:
+      name: Upload Failed Tests
+      command: echo "Failed"
+      when: on_fail
 
 workflows:
   my_workflow:
